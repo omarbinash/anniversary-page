@@ -104,7 +104,7 @@ body {
 .gallery-wrapper {
   display: inline-block;
   white-space: nowrap;
-  animation: scrollGallery 30s linear infinite;
+  animation: scrollGallery 45s linear infinite;
 }
 
 /* Audio Control */

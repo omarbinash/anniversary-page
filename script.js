@@ -39,3 +39,20 @@ function toggleMusic() {
         music.pause();
     }
 }
+
+const galleryWrapper = document.querySelector('.gallery-wrapper');
+let clone = galleryWrapper.innerHTML;
+galleryWrapper.innerHTML += clone; // Duplicate the content for seamless looping
+
+let scrollAmount = 0;
+
+function scrollGallery() {
+    scrollAmount -= 1;
+    if (Math.abs(scrollAmount) >= galleryWrapper.scrollWidth / 2) {
+        scrollAmount = 0;
+    }
+    galleryWrapper.style.transform = `translateX(${scrollAmount}px)`;
+    requestAnimationFrame(scrollGallery);
+}
+
+scrollGallery();

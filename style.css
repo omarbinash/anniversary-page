@@ -73,7 +73,7 @@ body {
 #gallery {
   overflow: hidden;
   white-space: nowrap;
-  padding: 2vh 0;
+  padding: 20px 0;
   background-color: #f8f9fa;
   position: relative;
 }
@@ -82,7 +82,7 @@ body {
   height: auto;
   max-height: 20vh; /* Set a max height relative to the viewport height */
   object-fit: cover;
-  margin-right: 2vw;
+  margin-right: 20px;
   display: inline-block;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -97,14 +97,15 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .gallery-wrapper {
   display: inline-block;
   white-space: nowrap;
-  animation: scrollGallery 45s linear infinite;
+  animation: scrollGallery 40s linear infinite;
+  animation-timing-function: linear;
 }
 
 /* Audio Control */

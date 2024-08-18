@@ -47,12 +47,14 @@ galleryWrapper.innerHTML += clone; // Duplicate the content for seamless looping
 let scrollAmount = 0;
 
 function scrollGallery() {
-    scrollAmount -= 1;
+    scrollAmount -= 1; // Adjust speed by changing this value
     if (Math.abs(scrollAmount) >= galleryWrapper.scrollWidth / 2) {
-        scrollAmount = 0;
+        scrollAmount = 0; // Reset to start the loop seamlessly
     }
     galleryWrapper.style.transform = `translateX(${scrollAmount}px)`;
     requestAnimationFrame(scrollGallery);
 }
 
+// Start the gallery scrolling
 scrollGallery();
+

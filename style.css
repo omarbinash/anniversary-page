@@ -1,0 +1,251 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* Landing Section */
+#landing {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#landing h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Poem Section */
+#poem {
+  padding: 20px;
+  font-family: 'Playfair Display', serif; /* Apply the new font */
+  font-size: 1.4em; /* Slightly larger font size for readability */
+  line-height: 1.8; /* Increase line height for better readability */
+  text-align: center;
+  color: #444; /* A darker shade to enhance readability */
+}
+
+#poem p {
+  margin-bottom: 30px;
+  opacity: 1; /* Ensure visibility */
+  transform: translateY(0); /* No translation by default */
+  transition: all 0.6s ease;
+}
+
+
+
+/* Conclusion Section */
+#conclusion {
+  text-align: center;
+  padding: 40px;
+  background-color: #eaeaea;
+}
+
+#conclusion p {
+  font-family: "Matemasie", sans-serif;
+  font-size: 1.8em;
+  color: #555;
+}
+
+
+#gallery-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d4a5a5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#gallery {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+#gallery img {
+  width: 200px; /* Set the width */
+  height: auto; /* Set the height */
+  object-fit: cover; /* Ensure the images cover the box without stretching */
+  margin-right: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollGallery {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.gallery-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollGallery 30s linear infinite;
+}
+
+
+
+
+/* Audio Control */
+#music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #f8b400;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Design for Desktop */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  #landing h1 {
+      font-size: 3.5em;
+      padding: 40px 20px;
+  }
+
+  #poem p {
+      font-size: 1.5em;
+      padding: 0 40px;
+  }
+
+  #gallery {
+      padding: 40px;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  #gallery img {
+      width: 30%;
+      margin-right: 20px;
+  }
+
+  #conclusion p {
+      font-size: 2em;
+  }
+}
+
+/* Heart shapes */
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100; /* Ensure hearts are above other content */
+}
+
+.heart {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  transform: rotate(45deg);
+  animation: float 5s infinite;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart:after {
+  left: 7.5px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0) rotate(45deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+  }
+}
+
+/* Random positioning and timing for hearts */
+.heart:nth-child(1) {
+  left: 20%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  left: 50%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+  left: 70%;
+  animation-duration: 7s;
+  animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+  left: 40%;
+  animation-duration: 5s;
+  animation-delay: 6s;
+}
+
+.heart:nth-child(5) {
+  left: 60%;
+  animation-duration: 8s;
+  animation-delay: 8s;
+}
+
+.heart:nth-child(6) {
+  left: 30%;
+  animation-duration: 6s;
+  animation-delay: 10s;
+}
+

@@ -20,53 +20,50 @@ body {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 5vh 5vw;
 }
 
 #landing h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.5em;
+  font-size: 2.5rem; /* Use rem for better scaling across devices */
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Poem Section */
 #poem {
-  padding: 20px;
-  font-family: 'Playfair Display', serif; /* Apply the new font */
-  font-size: 1.4em; /* Slightly larger font size for readability */
-  line-height: 1.8; /* Increase line height for better readability */
+  padding: 2vh 5vw;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
   text-align: center;
-  color: #444; /* A darker shade to enhance readability */
+  color: #444;
 }
 
 #poem p {
-  margin-bottom: 30px;
-  opacity: 1; /* Ensure visibility */
-  transform: translateY(0); /* No translation by default */
+  margin-bottom: 3vh;
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.6s ease;
 }
-
-
 
 /* Conclusion Section */
 #conclusion {
   text-align: center;
-  padding: 40px;
+  padding: 4vh 5vw;
   background-color: #eaeaea;
 }
 
 #conclusion p {
   font-family: "Matemasie", sans-serif;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   color: #555;
 }
 
-
 #gallery-link {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 2vh;
+  padding: 1vh 2vw;
   background-color: #d4a5a5;
   color: #fff;
   text-decoration: none;
@@ -76,16 +73,16 @@ body {
 #gallery {
   overflow: hidden;
   white-space: nowrap;
-  padding: 20px 0;
+  padding: 2vh 0;
   background-color: #f8f9fa;
   position: relative;
 }
 
 #gallery img {
-  width: 200px; /* Set the width */
-  height: auto; /* Set the height */
-  object-fit: cover; /* Ensure the images cover the box without stretching */
-  margin-right: 20px;
+  height: auto;
+  max-height: 20vh; /* Set a max height relative to the viewport height */
+  object-fit: cover;
+  margin-right: 2vw;
   display: inline-block;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -97,10 +94,10 @@ body {
 
 @keyframes scrollGallery {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -110,15 +107,12 @@ body {
   animation: scrollGallery 30s linear infinite;
 }
 
-
-
-
 /* Audio Control */
 #music-control {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
+  bottom: 2vh;
+  right: 2vw;
+  padding: 1vh;
   background-color: #f8b400;
   border: none;
   border-radius: 50%;
@@ -129,35 +123,34 @@ body {
 /* Responsive Design for Desktop */
 @media (min-width: 768px) {
   body {
-      font-size: 18px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    font-size: 1.125rem;
+    padding: 2vh 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   #landing h1 {
-      font-size: 3.5em;
-      padding: 40px 20px;
+    font-size: 3.5rem;
+    padding: 4vh 2vw;
   }
 
   #poem p {
-      font-size: 1.5em;
-      padding: 0 40px;
+    font-size: 1.5rem;
+    padding: 0 4vw;
   }
 
   #gallery {
-      padding: 40px;
-      display: flex;
-      justify-content: space-around;
+    padding: 4vh 0;
+    display: flex;
+    justify-content: space-around;
   }
 
   #gallery img {
-      width: 30%;
-      margin-right: 20px;
+    max-height: 30vh; /* Adjust the image size for larger screens */
   }
 
   #conclusion p {
-      font-size: 2em;
+    font-size: 2rem;
   }
 }
 
@@ -168,12 +161,12 @@ body {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 100; /* Ensure hearts are above other content */
+  z-index: 100;
 }
 
 .heart {
-  width: 15px;
-  height: 15px;
+  width: 2.5vh;
+  height: 2.5vh;
   position: absolute;
   bottom: 0;
   background-color: red;
@@ -184,31 +177,31 @@ body {
 .heart:before,
 .heart:after {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 2.5vh;
+  height: 2.5vh;
   background-color: red;
   border-radius: 50%;
   position: absolute;
 }
 
 .heart:before {
-  top: -7.5px;
+  top: -1.25vh;
   left: 0;
 }
 
 .heart:after {
-  left: 7.5px;
+  left: 1.25vh;
   top: 0;
 }
 
 @keyframes float {
   0% {
-      transform: translateY(0) rotate(45deg);
-      opacity: 1;
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
   }
   100% {
-      transform: translateY(-100vh) rotate(45deg);
-      opacity: 0;
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
   }
 }
 
@@ -248,4 +241,3 @@ body {
   animation-duration: 6s;
   animation-delay: 10s;
 }
-
